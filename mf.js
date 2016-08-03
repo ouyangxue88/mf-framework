@@ -158,7 +158,7 @@
           		var result = that.options.ok();
           		if(result){
             		that.remove();
-          		} 
+          		}
         	} else {
           		that.remove();
         	}
@@ -196,6 +196,8 @@
         	if(this.options.lock){
           		$(".mf-mask").remove();
         	}
+          $("body").off("tap", ".mf-confirm-btns .ok");
+          $("body").off("tap", ".mf-confirm-btns .cancel");
       	}
     };
 
